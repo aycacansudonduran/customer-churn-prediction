@@ -1,8 +1,16 @@
 # Müşteri Kaybı (Churn) Tahmini
 
+**🔴 Canlı Demo:** [aycacansudonduran.github.io/customer-churn-prediction](https://aycacansudonduran.github.io/customer-churn-prediction/)
+
 Bu proje, bir abonelik/telekom işletmesinin müşteri verisi üzerinde uçtan uca bir
 makine öğrenmesi çalışmasıdır: keşifsel veri analizinden modele, model
 değerlendirmesinden iş önerilerine kadar tüm süreci kapsar.
+
+Proje ayrıca **tamamen tarayıcıda çalışan, sunucusuz bir web uygulaması**
+olarak da yayınlanmıştır (`docs/`) — eğitilmiş lojistik regresyon modelinin
+ağırlıkları JavaScript'e aktarılmış, tahmin hesaplaması hiçbir backend
+olmadan doğrudan tarayıcıda yapılır. Müşteri bilgilerini girip anlık churn
+olasılığı ve risk seviyesi görebilirsiniz.
 
 ## Proje Özeti
 
@@ -69,8 +77,14 @@ customer-churn-prediction/
 ├── src/
 │   ├── generate_data.py     # Sentetik veri üretimi
 │   ├── ml_models.py         # Sıfırdan Lojistik Regresyon + Random Forest
-│   └── analysis.py          # EDA + model eğitimi + görselleştirme
+│   ├── analysis.py          # EDA + model eğitimi + görselleştirme
+│   └── export_model.py      # Modeli web uygulaması için JSON'a aktarır
 ├── outputs/                 # Üretilen grafikler (PNG)
+├── docs/                    # Canlı web uygulaması (GitHub Pages)
+│   ├── index.html
+│   ├── style.css
+│   ├── app.js
+│   └── model.json           # Dışa aktarılan model ağırlıkları
 └── README.md
 ```
 
@@ -79,6 +93,7 @@ customer-churn-prediction/
 ```bash
 python src/generate_data.py   # Veri setini üretir
 python src/analysis.py        # EDA yapar, modelleri eğitir, grafikleri kaydeder
+python src/export_model.py    # Modeli web uygulaması için dışa aktarır
 ```
 
 ## İş Önerileri
