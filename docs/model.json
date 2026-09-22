@@ -1,0 +1,166 @@
+{
+  "feature_order": [
+    "Yas",
+    "Abonelik Süresi (Ay)",
+    "Destek Çağrısı Sayısı",
+    "Aylık Ücret",
+    "Toplam Ücret",
+    "Cinsiyet_Kadın",
+    "Partner_Hayır",
+    "Bakmakla Yükümlü_Hayır",
+    "Sözleşme Tipi_2 Yıllık",
+    "Sözleşme Tipi_Aylık",
+    "İnternet Hizmeti_Fiber",
+    "İnternet Hizmeti_Yok",
+    "Teknik Destek_Yok",
+    "Online Güvenlik_Yok",
+    "Kağıtsız Fatura_Hayır",
+    "Ödeme Yöntemi_Otomatik Ödeme",
+    "Ödeme Yöntemi_Posta Çeki"
+  ],
+  "weights": [
+    0.022057860005495956,
+    -0.5644535927044,
+    0.23706043726114948,
+    0.3393288642178522,
+    -0.09566073583883737,
+    0.016386824163333064,
+    -0.06859361460793707,
+    0.12658127571561817,
+    -0.442595798608419,
+    0.6531373387349564,
+    0.12045890541385823,
+    0.014346651165166407,
+    0.33896911141420344,
+    0.22812633066797003,
+    -0.06621441015818191,
+    -0.1441822403308249,
+    -0.12731128741680162
+  ],
+  "bias": -0.7979737983507753,
+  "mean": [
+    42.506166666666665,
+    30.251,
+    1.3898333333333333,
+    66.00617166666666,
+    1997.8473950000002,
+    0.499,
+    0.5121666666666667,
+    0.6983333333333334,
+    0.18266666666666667,
+    0.5833333333333334,
+    0.4493333333333333,
+    0.20783333333333334,
+    0.6518333333333334,
+    0.6908333333333333,
+    0.39616666666666667,
+    0.4565,
+    0.193
+  ],
+  "std": [
+    13.444898486249553,
+    18.447285229359178,
+    1.1971619100559827,
+    22.815346847985104,
+    1470.1533589110913,
+    0.49999899999899994,
+    0.49985195030350965,
+    0.4589813600669301,
+    0.3863930066079814,
+    0.4930066485916347,
+    0.49742626477588503,
+    0.40575687164715873,
+    0.476389167476433,
+    0.46215001773113557,
+    0.48909982507550426,
+    0.49810415577467326,
+    0.3946530121511807
+  ],
+  "numeric_cols": [
+    "Yas",
+    "Abonelik Süresi (Ay)",
+    "Destek Çağrısı Sayısı",
+    "Aylık Ücret",
+    "Toplam Ücret"
+  ],
+  "categorical_cols": [
+    "Cinsiyet",
+    "Partner",
+    "Bakmakla Yükümlü",
+    "Sözleşme Tipi",
+    "İnternet Hizmeti",
+    "Teknik Destek",
+    "Online Güvenlik",
+    "Kağıtsız Fatura",
+    "Ödeme Yöntemi"
+  ],
+  "categories": {
+    "Cinsiyet": {
+      "all_values": [
+        "Erkek",
+        "Kadın"
+      ],
+      "baseline": "Erkek"
+    },
+    "Partner": {
+      "all_values": [
+        "Evet",
+        "Hayır"
+      ],
+      "baseline": "Evet"
+    },
+    "Bakmakla Yükümlü": {
+      "all_values": [
+        "Evet",
+        "Hayır"
+      ],
+      "baseline": "Evet"
+    },
+    "Sözleşme Tipi": {
+      "all_values": [
+        "1 Yıllık",
+        "2 Yıllık",
+        "Aylık"
+      ],
+      "baseline": "1 Yıllık"
+    },
+    "İnternet Hizmeti": {
+      "all_values": [
+        "DSL",
+        "Fiber",
+        "Yok"
+      ],
+      "baseline": "DSL"
+    },
+    "Teknik Destek": {
+      "all_values": [
+        "Var",
+        "Yok"
+      ],
+      "baseline": "Var"
+    },
+    "Online Güvenlik": {
+      "all_values": [
+        "Var",
+        "Yok"
+      ],
+      "baseline": "Var"
+    },
+    "Kağıtsız Fatura": {
+      "all_values": [
+        "Evet",
+        "Hayır"
+      ],
+      "baseline": "Evet"
+    },
+    "Ödeme Yöntemi": {
+      "all_values": [
+        "Elektronik Çek",
+        "Otomatik Ödeme",
+        "Posta Çeki"
+      ],
+      "baseline": "Elektronik Çek"
+    }
+  },
+  "accuracy_on_full_data": 0.733
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Müşteri Kaybı Tahmin Aracı</title>
+<meta name="description" content="Sıfırdan NumPy ile eğitilmiş lojistik regresyon modeli — tamamen tarayıcıda çalışan, sunucusuz churn tahmin aracı.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-badge">Canlı Demo · Sunucusuz</div>
+      <h1>Müşteri Kaybı Tahmin Aracı</h1>
+      <p class="hero-sub">
+        Lojistik regresyon modeli <strong>scikit-learn kullanılmadan, NumPy ile sıfırdan</strong>
+        eğitildi. Tahmin hesaplaması tamamen bu sayfada, tarayıcınızda çalışır — hiçbir veri
+        sunucuya gönderilmez.
+      </p>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat">
+          <span class="stat-value" id="stat-accuracy">—</span>
+          <span class="stat-label">Doğruluk</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">17</span>
+          <span class="stat-label">Değişken</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">6.000</span>
+          <span class="stat-label">Eğitim Verisi</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card form-card">
+        <h2>Müşteri Bilgileri</h2>
+        <form id="predict-form">
+          <div class="field-grid" id="field-grid"></div>
+          <button type="submit" class="btn-primary">Churn Olasılığını Hesapla</button>
+        </form>
+      </section>
+
+      <section class="card result-card">
+        <h2>Tahmin Sonucu</h2>
+        <div id="result-empty" class="result-empty">
+          <div class="result-empty-icon">📈</div>
+          <p>Sol taraftaki formu doldurup hesapla butonuna basın.</p>
+        </div>
+        <div id="result-content" class="result-content" hidden>
+          <div class="gauge-wrap">
+            <svg viewBox="0 0 200 120" class="gauge">
+              <path d="M 20 110 A 80 80 0 0 1 180 110" class="gauge-track"/>
+              <path id="gauge-fill" d="M 20 110 A 80 80 0 0 1 180 110" class="gauge-fill"/>
+              <circle id="gauge-needle" cx="100" cy="110" r="6"/>
+            </svg>
+            <div class="gauge-value">
+              <span id="proba-value">0%</span>
+              <span class="gauge-caption">Churn Olasılığı</span>
+            </div>
+          </div>
+          <div id="risk-badge" class="risk-badge">Risk seviyesi</div>
+          <div class="factor-list" id="factor-list">
+            <h3>Sonucu En Çok Etkileyen Faktörler</h3>
+            <div id="factor-items"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Bu araç bir portföy projesidir · Model ve kaynak kod
+        <a href="https://github.com/aycacansudonduran/customer-churn-prediction" target="_blank" rel="noopener">GitHub</a>
+        üzerinde açık kaynak olarak paylaşılmıştır.
+      </p>
+    </footer>
+  </div>
+
+  <script src="model_loader.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
